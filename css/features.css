@@ -1,6 +1,5 @@
 .features{
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding:96px 0;
     gap: 72px;
 }
 .features__list{
@@ -45,8 +44,20 @@
 
 }
 @media screen and (min-width: 1158px){
+    .features{
+        padding: 120px 0;
+    }
     .features__item{
         width:  calc((100% - 3 * 24px) / 4);
+    }
+    .features__title{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+    }
+    .features__text{
+        font-weight: 400;
     }
     .features__decoration{
 

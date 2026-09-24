@@ -18,16 +18,15 @@
 .hero__title{
     font-family: Roboto;
     font-weight: 700;
-    font-style: bold;
-    line-height: 1.07;
-    font-size: 56px;
+    font-size: 36px;
+    line-height: 111%;
+    letter-spacing: 0.02em;
     text-align: center;
     color: #FFFFFF;
     letter-spacing: 0.02em;
-    max-width: 496px;
+    max-width: 216px;
     margin: 0 auto;
-    margin-bottom: 48px;
-
+    margin-bottom: 72px;
 }
 .button{
     display: block;
@@ -60,6 +59,20 @@
         padding-top: 112px;
         padding-bottom: 112px;
     }
+    .hero__title{
+        font-family: Roboto;
+        font-weight: 700;
+        font-style: bold;
+        line-height: 1.07;
+        font-size: 56px;
+        text-align: center;
+        color: #FFFFFF;
+        letter-spacing: 0.02em;
+        max-width: 496px;
+        margin: 0 auto;
+        margin-bottom: 48px;
+
+    }
 }
 
 @media screen and (min-width:1158px) {
@@ -70,6 +83,7 @@
         url('../images/hero-desctop@2x.jpg') 2x
         );
         max-width: 1440px;
+        padding: 120px 0;
     }
 }
 
