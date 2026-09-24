@@ -51,7 +51,9 @@
     border: 1px solid #404BBF;
     color: #fff;
 }
-
+.mobile-address{
+  font-style: normal;
+}
 .mobile-nav {
   display: flex;
   flex-direction: column;
@@ -76,7 +78,7 @@
 .mobile-address-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
   margin-bottom: 48px;
 }
 
