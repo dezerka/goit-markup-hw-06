@@ -226,6 +226,6 @@
     }
 
     .footer__socials {
-        margin-right: 80px; /* Зазвичай тут 80px, а не 83px */
+        margin-right: 83px;
     }
 }

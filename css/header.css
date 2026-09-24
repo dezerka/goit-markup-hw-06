@@ -6,7 +6,7 @@
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Розносить логотип і кнопку по краях */
+  justify-content: flex-start;
 }
 
 .nav {
@@ -95,6 +95,7 @@
   .address {
     display: block;
     font-style: normal;
+    margin: auto auto;
   }
 
   /* На планшеті контакти стоять один під одним */

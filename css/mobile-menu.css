@@ -46,7 +46,7 @@
     align-items: center;
     justify-content: center;
 }
-.mobile-menu-clos-btn:hover,.mobile-menu-clos-btn:focus{
+.mobile-menu-close:hover,.mobile-menu-close:focus{
     background: #404BBF;
     border: 1px solid #404BBF;
     color: #fff;
