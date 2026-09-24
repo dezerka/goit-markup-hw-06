@@ -1,0 +1,114 @@
+.address a{
+    color: #434455;
+    font-style: normal;
+    font-weight: 400;
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav__links a{
+    display: block;
+    color: #2E2F42;
+    font-style: normal;
+    font-weight: 500;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+.nav__links a.active {
+    color: #404BBF;
+}
+.active::after {
+    content: "";
+    position: absolute;
+    display: block; 
+    width: 100%;
+    height: 4px;
+    background-color: #404BBF;
+    left: 0;
+    bottom: 0px; 
+    border-radius: 2px; 
+}
+.nav__links a:hover {
+    color: #404BBF;
+    font-style: normal;
+}
+.nav__links a:focus {
+    color: #404BBF;
+    font-style: normal;
+}
+.address a:hover {
+    color: #404BBF;
+    font-style: normal;
+}
+.address a:focus {
+    color: #404BBF;
+    font-style: normal;
+}
+.header__container{
+    display: flex;
+    flex-direction: row;
+    isolation: isolate;
+    margin: 0 auto;
+}
+
+.logo{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-right: 76px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+}
+.nav__links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 40px;
+    margin-right: 320px;
+    
+
+}
+.address{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    margin-left: auto;
+    gap: 0;
+
+}
+.address ul{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.header{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    padding: 0px;
+
+    background: #FFFFFF;
+    border-bottom: 1px solid #E7E9FC;
+    border-radius: 0px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}

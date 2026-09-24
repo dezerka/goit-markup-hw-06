@@ -21,25 +21,97 @@
   </head>
   <body>
     <header id="header" class="header">
-      <div class="header__container container">
-        <a href="./index.html" class="logo"
-          ><span class="accent">Web</span>Studio</a
-        >
-        <nav>
+      <div class="container header-container">
+        <nav class="nav">
+          <a href="./index.html" class="logo"
+            >Web<span class="logo-accent">Studio</span></a
+          >
           <ul class="nav__links">
-            <li><a href="#features" class="active">Features</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="./index.html" class="active">Features</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Portfolio</a></li>
           </ul>
         </nav>
+
         <address class="address">
-          <ul>
+          <ul class="address__list">
             <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
             <li><a href="tel:+110001111111">+11 (000) 111-11-11</a></li>
           </ul>
         </address>
+
+        <button type="button" class="mobile-menu-open js-open-menu">
+          <svg class="mobile-menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#burger-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
+    <div class="mobile-menu is-open">
+      <div class="mobile-menu-container">
+        <button type="button" class="mobile-menu-close js-close-menu">
+          <svg width="8" height="8">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-nav">
+          <li>
+            <a href="./index.html" class="mobile-nav-link active">Features</a>
+          </li>
+          <li><a href="#" class="mobile-nav-link">Team</a></li>
+          <li><a href="#" class="mobile-nav-link">Portfolio</a></li>
+        </ul>
+
+        <div class="mobile-bottom">
+          <address class="mobile-address">
+            <ul class="mobile-address-list">
+              <li>
+                <a href="tel:+110001111111" class="mobile-phone"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@devstudio.com" class="mobile-email"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="mobile-socials">
+                  <li>
+                    <a href="#index" class="team__link">
+                      <svg class="team__icon" width="24" height="24">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#index" class="team__link">
+                      <svg class="team__icon" width="24" height="24">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#index" class="team__link">
+                      <svg class="team__icon" width="24" height="24">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#index" class="team__link">
+                      <svg class="team__icon" width="24" height="24">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+        </div>
+      </div>
+    </div>
     <main>
       <section id="hero" class="hero">
         <div class="hero__container container">
@@ -105,10 +177,11 @@
       <section id="team" class="team">
         <div class="container">
           <h2>Our Team</h2>
-          <ul class="team-grid">
-            <li class="team__item">
+          <ul class="team-list">
+            <li class="team__card">
               <img
                 src="./images/team-1.jpg"
+                srcset="./images/team-1.jpg 1x, ./images/team-1@2x.jpg 2x"
                 alt="man with a beard and laptop"
                 width="264"
                 height="260"
@@ -149,9 +222,10 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item">
+            <li class="team__card">
               <img
                 src="./images/team-2.jpg"
+                srcset="./images/team-2.jpg 1x, ./images/team-2@2x.jpg 2x"
                 alt="smiling man with short hair"
                 width="264"
                 height="260"
@@ -192,9 +266,10 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item">
+            <li class="team__card">
               <img
                 src="./images/team-3.jpg"
+                srcset="./images/team-3.jpg 1x, ./images/team-3@2x.jpg 2x"
                 alt="woman with long black hair"
                 width="264"
                 height="260"
@@ -235,9 +310,10 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item">
+            <li class="team__card">
               <img
                 src="./images/team-4.jpg"
+                srcset="./images/team-4.jpg 1x, ./images/team-4@2x.jpg 2x"
                 alt="man with short hair"
                 width="264"
                 height="260"
@@ -289,6 +365,10 @@
               <div class="media">
                 <img
                   src="./images/portfolio-1.jpg"
+                  srcset="
+                    ./images/portfolio-1.jpg    1x,
+                    ./images/portfolio@2x-1.jpg 2x
+                  "
                   alt="project image"
                   width="360"
                   height="300"
@@ -311,6 +391,10 @@
               <div class="media">
                 <img
                   src="./images/portfolio-2.jpg"
+                  srcset="
+                    ./images/portfolio-2.jpg    1x,
+                    ./images/portfolio@2x-2.jpg 2x
+                  "
                   alt="Cashless Payment"
                   width="360"
                   height="300"
@@ -333,6 +417,10 @@
               <div class="media">
                 <img
                   src="./images/portfolio-3.jpg"
+                  srcset="
+                    ./images/portfolio-3.jpg    1x,
+                    ./images/portfolio@2x-3.jpg 2x
+                  "
                   alt="project image"
                   width="360"
                   height="300"
@@ -355,6 +443,10 @@
               <div class="media">
                 <img
                   src="./images/portfolio-4.jpg"
+                  srcset="
+                    ./images/portfolio-4.jpg    1x,
+                    ./images/portfolio@2x-4.jpg 2x
+                  "
                   alt="project image"
                   width="360"
                   height="300"
@@ -377,6 +469,10 @@
               <div class="media">
                 <img
                   src="./images/portfolio-5.jpg"
+                  srcset="
+                    ./images/portfolio-5.jpg    1x,
+                    ./images/portfolio@2x-5.jpg 2x
+                  "
                   alt="project image"
                   width="360"
                   height="300"
@@ -399,6 +495,10 @@
               <div class="media">
                 <img
                   src="./images/portfolio-6.jpg"
+                  srcset="
+                    ./images/portfolio-6.jpg    1x,
+                    ./images/portfolio@2x-6.jpg 2x
+                  "
                   alt="project image"
                   width="360"
                   height="300"
@@ -484,7 +584,7 @@
         </div>
       </div>
     </footer>
-    <div id="modal" class="modal__overlay is-open">
+    <div id="modal" class="modal__overlay">
       <div class="modal">
         <button type="button" class="modal-close-btn" aria-label="Close modal">
           <svg class="modal-close-icon" width="8" height="8">

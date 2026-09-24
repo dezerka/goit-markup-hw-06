@@ -1,8 +1,8 @@
 .team{
     background-color: #F4F4FD;
     text-align: center;
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 .team .container{
 display: flex;
@@ -10,6 +10,10 @@ flex-direction: column;
 align-items: center;
 padding: 0px 15px;
 gap: 72px;
+}
+.team__position{
+    color: #434455;
+    margin-top: 8px;
 }
 .team-list {
     display: flex;
@@ -19,18 +23,13 @@ gap: 72px;
     gap: 24px;
     flex-wrap: wrap;
 }
-.team__position{
-    color: #434455;
-    margin-top: 8px;
-}
-.team__card {
+.team__item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center; 
     align-items: center;
     padding: 0px;
-    margin: auto;
     background: #FFFFFF;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 
@@ -73,15 +72,3 @@ gap: 72px;
     color: #f4f4fd;
 }
 
-@media screen and (min-width:768px) {
-    .team .container{
-        padding: 120px 0;
-        max-width: 768px;
-    }
-}
-@media screen and (min-width:1158px) {
-    .team .container{
-        padding: 120px 0;
-        max-width: 1158px;
-    }
-}

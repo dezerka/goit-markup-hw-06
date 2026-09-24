@@ -1,114 +1,143 @@
-.address a{
-    color: #434455;
-    font-style: normal;
-    font-weight: 400;
-    display: block;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+/* Базові стилі (Мобільна версія за замовчуванням) */
+.header {
+  border-bottom: 1px solid #E7E9FC;
+  background: #FFFFFF;
 }
-.nav__links a{
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Розносить логотип і кнопку по краях */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+  padding: 17px 0;
+}
+
+.logo-accent {
+  color: #2e2f42;
+}
+
+/* Ховаємо навігацію та контакти на мобілках */
+.nav__links,
+.address {
+  display: none;
+}
+
+/* Кнопка бургера */
+.mobile-menu-open {
+  display: block;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.mobile-menu-icon {
+  stroke: #2f2f37;
+}
+
+/* ========================================= */
+/* TABLET VERSION (від 768px) */
+/* ========================================= */
+@media screen and (min-width: 768px) {
+  .mobile-menu-open {
+    display: none; /* Ховаємо бургер */
+  }
+
+  .nav__links {
+    display: flex;
+    gap: 40px;
+    margin-left: 120px; /* Відступ від логотипу */
+  }
+
+  .nav__links a {
     display: block;
-    color: #2E2F42;
-    font-style: normal;
+    padding: 24px 0;
     font-weight: 500;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-}
-.nav__links a.active {
-    color: #404BBF;
-}
-.active::after {
+  }
+
+  .nav__links a:hover,
+  .nav__links a:focus,
+  .nav__links a.active {
+    color: #404bbf;
+  }
+
+  .nav__links a.active::after {
     content: "";
     position: absolute;
-    display: block; 
+    bottom: -1px;
+    left: 0;
     width: 100%;
     height: 4px;
-    background-color: #404BBF;
-    left: 0;
-    bottom: 0px; 
-    border-radius: 2px; 
-}
-.nav__links a:hover {
-    color: #404BBF;
+    background-color: #404bbf;
+    border-radius: 2px;
+  }
+
+  .address {
+    display: block;
     font-style: normal;
-}
-.nav__links a:focus {
-    color: #404BBF;
-    font-style: normal;
-}
-.address a:hover {
-    color: #404BBF;
-    font-style: normal;
-}
-.address a:focus {
-    color: #404BBF;
-    font-style: normal;
-}
-.header__container{
+  }
+
+  /* На планшеті контакти стоять один під одним */
+  .address__list {
     display: flex;
-    flex-direction: row;
-    isolation: isolate;
-    margin: 0 auto;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .address__list a {
+    display: block;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .address__list a:hover,
+  .address__list a:focus {
+    color: #404bbf;
+  }
 }
 
-.logo{
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.33;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    margin-right: 76px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+/* ========================================= */
+/* DESKTOP VERSION (від 1158px) */
+/* ========================================= */
+@media screen and (min-width: 1158px) {
+  .nav__links {
+    margin-left: 76px;
+  }
 
-}
-.nav__links{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 40px;
-    margin-right: 320px;
-    
-
-}
-.address{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-
-    margin-left: auto;
-    gap: 0;
-
-}
-.address ul{
-    display: flex;
+  /* На десктопі контакти стоять в один ряд */
+  .address__list {
     flex-direction: row;
     gap: 40px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-.header{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; 
-    align-items: center;
-    padding: 0px;
+  }
 
-    background: #FFFFFF;
-    border-bottom: 1px solid #E7E9FC;
-    border-radius: 0px;
-
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-
+  .address__list a {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding: 24px 0;
+  }
 }

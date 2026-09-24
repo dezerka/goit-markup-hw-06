@@ -1,6 +1,10 @@
+.hide{
+    display: none !important;
+}
 .accent{
     color: #4D5AE5
 }
+
 body{
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -8,8 +12,6 @@ body{
     letter-spacing: 0.02em;
     background-color: #fff;
     color: #2E2F42;
-
-
 }
 img{
     max-width: 100%;
@@ -61,13 +63,6 @@ letter-spacing: 0.02em;
 
 color: #2E2F42;
 }
-.container {
-  max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
 .sr-only {
   position: absolute;
   white-space: nowrap;
@@ -79,4 +74,25 @@ color: #2E2F42;
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
   margin: -1px;
+}
+.container {
+    width: 100%;
+  max-width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+@media screen and (min-width:768px){
+    .container{
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width:1158px){
+    .container{
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+    .section{
+        padding: 120px 0;
+    }
 }
